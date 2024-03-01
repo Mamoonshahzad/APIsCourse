@@ -44,7 +44,9 @@ class _UsersApiScreenState extends State<UsersApiScreen> {
             future: getUsersApi(),
             builder: (context, AsyncSnapshot<List<UsersModel>> snapshot) {
               if (!snapshot.hasData) {
-                return const CircularProgressIndicator();
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
               } else {
                 return ListView.builder(
                     itemCount: usersList.length,

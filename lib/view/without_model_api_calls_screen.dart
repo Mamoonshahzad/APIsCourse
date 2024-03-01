@@ -40,7 +40,9 @@ class _WithoutModelApiCallsScreenState
                   future: getUserApi(),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const Text("Loading");
+                      return const Center(
+                        child: CircularProgressIndicator(),
+                      );
                     }
                     return ListView.builder(
                         itemCount: data.length,

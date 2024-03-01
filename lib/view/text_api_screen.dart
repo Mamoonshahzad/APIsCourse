@@ -47,7 +47,9 @@ class _TextAPIScreenState extends State<TextAPIScreen> {
                   future: getPostApi(),
                   builder: (context, snapshot) {
                     if (!snapshot.hasData) {
-                      return const Text('Loading');
+                      return const Center(
+                        child: CircularProgressIndicator(),
+                      );
                     } else {
                       return ListView.builder(itemBuilder: (context, index) {
                         return Card(

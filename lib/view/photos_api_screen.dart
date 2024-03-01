@@ -42,18 +42,24 @@ class _PhotosAPIScreenState extends State<PhotosAPIScreen> {
               child: FutureBuilder(
             future: getPhotos(),
             builder: (context, AsyncSnapshot<List<Photos>> snapshot) {
-              return ListView.builder(
-                  itemCount: photosList.length,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      leading: CircleAvatar(
-                        backgroundImage:
-                            NetworkImage(snapshot.data![index].url.toString()),
-                      ),
-                      subtitle: Text(snapshot.data![index].title.toString()),
-                      title: Text('Notes id: ${snapshot.data![index].id}'),
-                    );
-                  });
+              if (!snapshot.hasData) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else {
+                return ListView.builder(
+                    itemCount: photosList.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              snapshot.data![index].url.toString()),
+                        ),
+                        subtitle: Text(snapshot.data![index].title.toString()),
+                        title: Text('Notes id: ${snapshot.data![index].id}'),
+                      );
+                    });
+              }
             },
           ))
         ],

@@ -31,12 +31,16 @@ class HomeScreenWidget extends StatelessWidget {
           ],
         ),
         child: Center(
-          child: Text(
-            buttonText,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-              color: Colors.blue,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              textAlign: TextAlign.center,
+              buttonText,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: Colors.blue,
+              ),
             ),
           ),
         ),

@@ -1,4 +1,3 @@
-import 'package:api_practice_course/view/complex_api_screen.dart';
 import 'package:api_practice_course/view/photos_api_screen.dart';
 import 'package:api_practice_course/view/text_api_screen.dart';
 import 'package:api_practice_course/view/users_api_screen.dart';
@@ -8,7 +7,6 @@ import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,20 +57,10 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ComplexApiScreen()));
-                  },
-                  buttonText: 'Complex API'),
-              const SizedBox(height: 20),
-              HomeScreenWidget(
-                  color: Colors.greenAccent.shade100,
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
                             builder: (context) =>
                                 const WithoutModelApiCallsScreen()));
                   },
-                  buttonText: 'Without Model Calls'),
+                  buttonText: 'Model Less Calls'),
             ],
           ),
         ),
