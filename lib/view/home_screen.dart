@@ -1,7 +1,8 @@
-import 'package:api_practice_course/view/photos_api_screen.dart';
-import 'package:api_practice_course/view/text_api_screen.dart';
-import 'package:api_practice_course/view/users_api_screen.dart';
-import 'package:api_practice_course/view/without_model_api_calls_screen.dart';
+import 'package:api_practice_course/view/get_apis/get_apis_categories_screen.dart';
+import 'package:api_practice_course/view/get_apis/photos_api_screen.dart';
+import 'package:api_practice_course/view/get_apis/text_api_screen.dart';
+import 'package:api_practice_course/view/get_apis/users_api_screen.dart';
+import 'package:api_practice_course/view/get_apis/without_model_api_calls_screen.dart';
 import 'package:api_practice_course/widgets/home_screen_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -18,50 +19,20 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              HomeScreenWidget(
-                  color: Colors.blueGrey.shade100,
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const TextAPIScreen()));
-                  },
-                  buttonText: 'Text Api'),
-              const SizedBox(height: 20),
-              HomeScreenWidget(
-                  color: Colors.grey,
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const PhotosAPIScreen()));
-                  },
-                  buttonText: 'Photos Api'),
-              const SizedBox(height: 20),
-              HomeScreenWidget(
-                  color: Colors.yellow.shade100,
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const UsersApiScreen()));
-                  },
-                  buttonText: 'Users API'),
-              const SizedBox(height: 20),
-              HomeScreenWidget(
-                  color: Colors.greenAccent.shade100,
-                  onTap: () {
-                    Navigator.push(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                HomeScreenWidget(
+                    color: Colors.black54,
+                    onTap: () => Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                const WithoutModelApiCallsScreen()));
-                  },
-                  buttonText: 'Model Less Calls'),
-            ],
+                                const GetAPIsCategoriesScreen())),
+                    buttonText: "Get APIs"),
+              ],
+            ),
           ),
         ),
       ),

@@ -22,13 +22,6 @@ class HomeScreenWidget extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: color,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 3,
-              blurRadius: 3,
-            ),
-          ],
         ),
         child: Center(
           child: Padding(

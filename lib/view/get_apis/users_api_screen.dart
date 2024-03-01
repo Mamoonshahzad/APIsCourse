@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import '../Models/users_model.dart';
+import '../../Models/users_model.dart';
 
 class UsersApiScreen extends StatefulWidget {
   const UsersApiScreen({super.key});

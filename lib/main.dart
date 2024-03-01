@@ -1,4 +1,4 @@
-import 'package:api_practice_course/view/text_api_screen.dart';
+import 'package:api_practice_course/view/get_apis/text_api_screen.dart';
 import 'package:api_practice_course/view/home_screen.dart';
 import 'package:flutter/material.dart';
 

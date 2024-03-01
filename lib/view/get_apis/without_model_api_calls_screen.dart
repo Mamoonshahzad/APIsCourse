@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import '../widgets/reusabel_row_widget.dart';
+import '../../widgets/reusabel_row_widget.dart';
 
 class WithoutModelApiCallsScreen extends StatefulWidget {
   const WithoutModelApiCallsScreen({super.key});
